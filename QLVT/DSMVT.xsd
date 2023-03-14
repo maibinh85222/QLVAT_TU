@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMVT" targetNamespace="http://tempuri.org/DSMVT.xsd" xmlns:mstns="http://tempuri.org/DSMVT.xsd" xmlns="http://tempuri.org/DSMVT.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLVTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLVTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QLVT.Properties.Settings.GlobalReference.Default.QLVTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_LAYMAVTTableAdapter" GeneratorDataComponentClassName="V_LAYMAVTTableAdapter" Name="V_LAYMAVT" UserDataComponentName="V_LAYMAVTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLVTConnectionString (Settings)" DbObjectName="QLVT.dbo.V_LAYMAVT" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MaMH FROM dbo.V_LAYMAVT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaMH" DataSetColumn="MaMH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMVT" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSMVT" msprop:Generator_UserDSName="DSMVT">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_LAYMAVT" msprop:Generator_TableClassName="V_LAYMAVTDataTable" msprop:Generator_TableVarName="tableV_LAYMAVT" msprop:Generator_TablePropName="V_LAYMAVT" msprop:Generator_RowDeletingName="V_LAYMAVTRowDeleting" msprop:Generator_RowChangingName="V_LAYMAVTRowChanging" msprop:Generator_RowEvHandlerName="V_LAYMAVTRowChangeEventHandler" msprop:Generator_RowDeletedName="V_LAYMAVTRowDeleted" msprop:Generator_UserTableName="V_LAYMAVT" msprop:Generator_RowChangedName="V_LAYMAVTRowChanged" msprop:Generator_RowEvArgName="V_LAYMAVTRowChangeEvent" msprop:Generator_RowClassName="V_LAYMAVTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaMH" msprop:Generator_ColumnVarNameInTable="columnMaMH" msprop:Generator_ColumnPropNameInRow="MaMH" msprop:Generator_ColumnPropNameInTable="MaMHColumn" msprop:Generator_UserColumnName="MaMH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_LAYMAVT" />
+      <xs:field xpath="mstns:MaMH" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
